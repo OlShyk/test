@@ -1,0 +1,13 @@
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
+}

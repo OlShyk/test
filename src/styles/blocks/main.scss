@@ -1,0 +1,46 @@
+.main {
+  padding: 180px calc(50vw - 585px) 150px calc(50vw - 585px);
+  width: 100vw;
+  max-width: 100vw;
+
+  @media (max-width: 1200px) {
+    padding: 140px 50px 110px 50px;
+  }
+
+  @media (max-width: 950px) {
+    padding: 100px 50px 80px 50px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 100px 50px 80px 50px;
+  }
+
+  @media (max-width: 400px) {
+    padding: 80px 15px 40px 15px;
+  }
+
+  &__title {
+    max-width: 800px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    text-transform: uppercase;
+    margin: 25px 0;
+
+    @media (max-width: 950px) {
+      max-width: 500px;
+      font-size: 28px;
+      line-height: 33px;
+      margin-bottom: 0px;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+}

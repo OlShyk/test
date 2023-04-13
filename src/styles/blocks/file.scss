@@ -1,0 +1,83 @@
+.file {
+  position: relative;
+  overflow: hidden;
+  height: 48px;
+  width: 370px;
+  font-size: 1em;
+  line-height: 48px;
+
+  &__button {
+    @include button(#3e9cdc);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 3px 5px 3px 35px;
+
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: background-color 0.2s;
+
+    &:focus {
+      outline-color: #3e9cdc;
+    }
+
+    &::before {
+      content: url('../assets/img/file.svg');
+      display: block;
+      width: 17.14px;
+      height: 20px;
+      position: absolute;
+      left: 28%;
+      transform: translateX(-50%) translateY(-25%);
+
+      @media (max-width: 400px) {
+        left: 25%;
+      }
+    }
+
+    &--chosen {
+      padding: 3px 5px 3px 5px;
+
+      &::before {
+        content: none;
+        display: none;
+      }
+    }
+  }
+
+  &:hover,
+  &:active,
+  &--focus {
+    button {
+      background: #3e9cdc;
+      text-shadow: #286690 0 -1px 0;
+      color: #fff;
+
+      &::before {
+        content: url('../assets/img/file-white.svg');
+      }
+    }
+  }
+
+  &__label {
+    @extend %visually-hidden;
+  }
+
+  input[type='file'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(20);
+    letter-spacing: 10em;
+    -ms-transform: scale(20);
+    opacity: 0;
+    cursor: pointer;
+  }
+}

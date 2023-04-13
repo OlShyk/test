@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="lorem, ipsum, dolor" />
+    <meta name="description" content="Тестовое задание" />
+    <title>Тестовое задание</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo" title="LoremIpsum.Net">LoremIpsum.<b>Net</b></a>
+      <nav>
+        <button class="header__button button" title="Меню"></button>
+        <ul class="header__navigation">
+          <li><a href="#" class="header__link" title="Бизнес">Бизнес</a></li>
+          <li><a href="#" class="header__link" title="О нас">О нас</a></li>
+          <li><a href="#" class="header__link" title="Цены">Цены</a></li>
+          <li><a href="#order" class="header__link" title="Оформить заказ">Оформить заказ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1 class="main__title"><b>Lorem ipsum </b>dolor sit amet consectetur <b>adipiscing</b></h1>
+      <section class="info">
+        <h2 class="info__title">At vero eos et accusamus et iusto odio dignissimos ducimus!</h2>
+        <ul class="info__text">
+          <li>- Totam rem aperiam eaque ipsa</li>
+          <li>- Sit voluptatem accusantium doloremque laudantium</li>
+          <li>- Sed ut perspiciatis, unde omnis iste natus error</li>
+        </ul>
+        <a href="#order" class="info__button button button--primary" title="заказать">заказать</a>
+        <a href="#" class="info__button button" title="подробнее">подробнее</a>
+      </section>
+
+      <section class="order" id="order">
+        <div>
+          <h2 class="order__title">Оформление <b>Заказа</b></h2>
+          <p class="order__text">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+        </div>
+        <ol class="order__steps" aria-label="Этапы оформления заказа">
+          <li class="order__step">
+            <div class="order__icon">
+              <img class="order__image" src="img/search.svg" alt="поиск" width="30.86" height="30.86" />
+            </div>
+            <p class="order__item">Lorem ipsum dolor sit amet</p>
+          </li>
+          <li class="order__step">
+            <div class="order__icon">
+              <img class="order__image" src="img/percent.svg" alt="Lorem ipsum" width="33.43" height="33.43" />
+            </div>
+            <p class="order__item">Сonsecteturadipiscing elit</p>
+          </li>
+          <li class="order__step">
+            <div class="order__icon">
+              <img class="order__image" src="img/subtract.svg" alt="Lorem ipsum" width="38.27" height="41.53" />
+            </div>
+            <p class="order__item">Sed do eiusmod tempor</p>
+          </li>
+          <li class="order__step">
+            <div class="order__icon">
+              <img class="order__image" src="img/mail.svg" alt="Lorem ipsum" width="36" height="28.29" />
+            </div>
+            <p class="order__item">Esse cillum dolore eu fugiat</p>
+          </li>
+          <li class="order__step">
+            <div class="order__icon">
+              <img class="order__image" src="img/money.svg" alt="оплата" width="38.57" height="25.71" />
+            </div>
+            <p class="order__item">Excepteur sint occaecat cupidatat non proident</p>
+          </li>
+        </ol>
+        <form action="/" method="post" class="form">
+          <div class="select" aria-haspopup="list" aria-owns="select-list">
+            <label class="select__label" for="system">Тип системы</label>
+            <input
+              type="text"
+              class="select__input"
+              id="system"
+              name="system"
+              autocomplete="off"
+              placeholder="Выберите тип системы"
+              aria-autocomplete="both"
+              aria-controls="select-list"
+              required
+            />
+            <ul class="select__list select__list--hidden" role="list" id="select-list">
+              <li class="select__option" role="option" tabindex="-1">Sed ut perspiciatis</li>
+              <li class="select__option" role="option" tabindex="-1">Nemo enim ipsam</li>
+              <li class="select__option" role="option" tabindex="-1">Et harum quidem</li>
+              <li class="select__option" role="option" tabindex="-1">Temporibus autem</li>
+              <li class="select__option" role="option" tabindex="-1">Itaque earum rerum</li>
+              <li class="select__option" role="option" tabindex="-1">Temporibus autem</li>
+              <li class="select__option" role="option" tabindex="-1">Itaque earum rerum</li>
+            </ul>
+          </div>
+          <label class="form__label" for="email">Электронная почта</label>
+          <input type="email" class="form__input" name="email" id="email" placeholder="Ваш e-mail" required />
+          <label class="form__label" for="name">Имя</label>
+          <input type="text" class="form__input" name="name" id="name" placeholder="Ваше имя" required />
+          <div class="range">
+            <label for="range" class="range__label">Sed ut perspiciatis, unde omnis iste natus</label>
+            <output for="range" name="value" id="output"></output>
+            <input type="range" name="range" id="range" min="15" max="85" step="10" value="75" />
+          </div>
+          <div class="file">
+            <label for="file" class="file__label">Прикрепить файл</label>
+            <button class="file__button" type="button" aria-hidden="true">Прикрепить файл</button>
+            <input type="file" id="file" />
+          </div>
+          <button class="form__button button button--primary" type="submit" title="Отправить">отправить</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">&copy 2018 <strong>«LoremIpsum.net»</strong> Все права защищены.</p>
+      <ul class="payment">
+        <li class="payment__qiwi">Qiwi wallet</li>
+        <li class="payment__yandex">Yandex Money</li>
+        <li class="payment__webmoney">Web Money</li>
+      </ul>
+      <adress class="footer__contacts">
+        <a class="footer__link footer__link--mail" href="mailTo:info@ipsum228.com">info@ipsum228.com</a>
+        <a class="footer__link footer__link--vk" href="#">Мы вконтакте</a>
+      </adress>
+    </footer>
+  </body>
+</html>

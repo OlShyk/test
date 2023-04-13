@@ -1,0 +1,97 @@
+.footer {
+  @include flex;
+  @include smallText;
+  height: 80px;
+  width: 100vw;
+  background-color: #3d4050;
+  padding: 0 calc(50vw - 585px);
+  justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: smaller;
+    justify-content: center;
+  }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  &__text {
+
+    @media (max-width: 600px) {
+      width: 40%;
+      font-size: smaller;
+    }
+
+    @media (max-width: 500px) {
+      width: auto;
+    }
+  }
+
+  &__contacts {
+    @include flex;
+    gap: 68px;
+
+    @media (max-width: 1200px) {
+      gap: 50px;
+    }
+
+    &::before {
+      @extend %pseudo;
+      transform: translateX(-60px);
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    @include smallText;
+    text-decoration: none;
+
+    &--mail {
+      position: relative;
+
+      &::before {
+        content: url('../assets/img/mail-blue.svg');
+        width: 13.5px;
+        height: 18px;
+        position: absolute;
+        transform: translateX(-200%) translateY(10%);
+      }
+    }
+
+    &--vk {
+      position: relative;
+
+      @media (max-width: 900px) {
+        color: transparent;
+        font-size: 1px;
+      }
+
+      @media (max-width: 900px) {
+        color: #FFF;
+        font-size: 13px;
+      }
+
+      &::before {
+        content: url('../assets/img/vk.svg');
+        width: 15px;
+        height: 12px;
+        position: absolute;
+        transform: translateX(-180%);
+      }
+    }
+  }
+
+  strong {
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+}

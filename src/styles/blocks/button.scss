@@ -1,0 +1,39 @@
+.button {
+  @include button(#6f6d7b);
+  @include smallText;
+  text-decoration: none;
+  display: inline-block;
+  padding: 14px 31.48px;
+  color: #2a2b30;
+  font-weight: 400;
+  border-radius: 4px;
+  transition: all 0.2s;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &--focus {
+    background: #3e9cdc;
+    text-shadow: #286690 0 -1px 0;
+    color: #FFF;
+  }
+
+  &--primary {
+    background-color: #3e9cdc;
+    border: 1px solid #ffffff;
+    color: #fff;
+
+    &:hover,
+    &:active,
+    &:focus {
+    background-color: #fff;
+    outline-color: #3e9cdc;
+    color: #2a2b30;
+    box-shadow: inset 0 0 0 3px #286690;
+  }
+  }
+
+  &:focus {
+    outline-color: #3e9cdc;
+  }
+}

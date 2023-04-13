@@ -1,0 +1,146 @@
+.order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    text-transform: uppercase;
+    margin-top: 121px;
+    text-align: center;
+
+    @media (max-width: 950px) {
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 28px;
+      line-height: 33px;
+    }
+
+    @media (max-width: 400px) {
+      margin-top: 120px;
+    }
+
+    b {
+      font-weight: 700;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #bbbbbb;
+  }
+
+  &__steps {
+    @include flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 80px 0;
+    align-items: flex-start;
+    gap: 40px;
+
+    @media (max-width: 1200px) {
+      margin: 50px 0;
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 400px) {
+      gap: 10px;
+      margin-top: 25px;
+    }
+  }
+
+  &__step {
+    @include flex;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 19px;
+    width: 200px;
+    font-weight: 400;
+    position: relative;
+
+    @media (max-width: 1200px) {
+      width: 150px;
+    }
+
+    @media (max-width: 968px) {
+      width: 110px;
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: row;
+      align-items: flex-start;
+      width: auto;
+      gap: 30px;
+    }
+
+    &:not(:last-child) {
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        border-width: 0 0 6px 0;
+        border-style: dotted;
+        border-image-source: url('../assets/img/dots.svg');
+        border-image-slice: 125% 26%;
+        border-image-repeat: round;
+        left: 47%;
+        bottom: 65%;
+        z-index: -1;
+
+        @media (max-width: 968px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+    background-color: #3e9cdc;
+    border: 5px solid #286690;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    flex-shrink: 0;
+
+    @media (max-width: 600px) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @media (max-width: 500px) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    align-self: center;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+
+    @media (max-width: 600px) {
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  &__item {
+    text-align: left;
+  }
+}

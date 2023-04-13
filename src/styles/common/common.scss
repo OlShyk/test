@@ -1,0 +1,45 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  max-width: 1920px;
+  font-family: 'Lato', sans-serif;
+  background: url(../assets/img/people.jpg) no-repeat top, url(../assets/img/BG.jpg) no-repeat bottom;
+  background-color: #272733;
+  background-attachment: local;
+  background-size: 1920px 850px, 1920px 920px;
+  color: #000;
+  margin: 0 auto;
+
+  @media (max-width: 1000px) {
+    overflow-x: hidden;
+    background-size: 960px 425px, 960px 425px;
+  }
+
+  @media (max-width: 400px) {
+    overflow-x: hidden;
+    background-size: 1000px 480px, 960px 425px;
+  }
+}
+
+b {
+  color: #3e9cdc;
+}
