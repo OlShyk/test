@@ -1037,21 +1037,22 @@ template {
     cursor: pointer;
     z-index: 2;
     padding: 0;
-    scrollbar-width: 7px; }
+    scrollbar-width: thin;
+    scrollbar-color: #3E9CDC #3D4050; }
     @media (max-width: 500px) {
       .select__list {
         width: 100%; } }
     .select__list::-webkit-scrollbar {
       width: 7px;
-      border-radius: 3px;
-      transform: translate(-5px); }
-    .select__list::-webkit-scrollbar-track {
-      background: #d9d9d9;
-      height: 170px;
       border-radius: 3px; }
-    .select__list *::-webkit-scrollbar-thumb {
-      background-color: #bdbdbd;
-      height: 53px; }
+    .select__list::-webkit-scrollbar-track {
+      background: #3D4050;
+      border-radius: 3px;
+      margin: 4px; }
+    .select__list::-webkit-scrollbar-thumb {
+      background: #3E9CDC;
+      height: 10%;
+      border-radius: 3px; }
     .select__list--hidden {
       display: none; }
   .select__option {
